@@ -1,0 +1,38 @@
+{
+  "name": "react-web-component",
+  "version": "1.0.0",
+  "description": "Create web component from using React",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SIL0RAK/react-web-component.git"
+  },
+  "keywords": [
+    "react",
+    "webcomponent"
+  ],
+  "author": "Karolis Krušinskas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SIL0RAK/react-web-component/issues"
+  },
+  "homepage": "https://github.com/SIL0RAK/react-web-component#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.0",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/preset-react": "^7.10.0",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
