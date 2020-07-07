@@ -1,5 +1,4 @@
 import getAsPascalCase from '../getAsPascalCase';
-import { TestScheduler } from 'jest';
 
 test.each([
     ['kebab-case', 'kebabCase'],

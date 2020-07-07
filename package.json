@@ -1,12 +1,14 @@
 {
   "name": "react-web-component",
-  "version": "1.0.0",
-  "description": "Create web component from using React",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Convert react component to WebComponent",
+  "main": "create.js",
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --open",
-    "build": "webpack"
+    "start:demo": "webpack-dev-server --open --config demo/webpack.config.js",
+    "build": "webpack",
+    "build:demo": "webpack --watch --config ./demo/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +16,9 @@
   },
   "keywords": [
     "react",
-    "webcomponent"
+    "webcomponent",
+    "legacy",
+    "convert"
   ],
   "author": "Karolis Krušinskas",
   "license": "ISC",
@@ -23,16 +27,18 @@
   },
   "homepage": "https://github.com/SIL0RAK/react-web-component#readme",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
     "@babel/preset-env": "^7.10.0",
     "@babel/preset-react": "^7.10.0",
+    "angular": "^1.8.0",
     "babel-loader": "^8.1.0",
     "jest": "^26.0.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

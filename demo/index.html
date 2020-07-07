@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <Section>
+           
+            <header>
+                <h1>Demo App: Score counter</h1>
+                <h5>dom manipulation example</h5>
+            </header>
+            <div>
+                <button id="add">Add</button>
+                <button id="remove">Remove</button>
+            </div>
+            <person-score id="personScore" name="jonas" score=80></person-score>
+        </Section>
+    </body>
+
+    <script>
+        var addButton = document.getElementById('add');
+        var removeButton = document.getElementById('remove');
+        var personScore =  document.getElementById('personScore');
+
+        addButton.addEventListener('click', () => {
+            var score = personScore.getAttribute('score');
+            personScore.setAttribute('score', ++score);
+        })
+
+        removeButton.addEventListener('click', () => {
+            var score = personScore.getAttribute('score');
+            personScore.setAttribute('score', --score);
+        })
+
+    </script>
+
+    <script src='./dist/main.bundle.js' ></script>
+</html>
