@@ -1,4 +1,7 @@
-import PersonScore from './src/PersonScore.jsx';
-import create from '../src/index';
+import PersonScore from './PersonScore.jsx';
+import create from '../src/create.js';
+import angularApp from './angular-app.js';
 
-create(PersonScore, ['score', 'name']);
+const middleware = (value) => value.includes('{{') ? undefined : value;
+
+create(PersonScore, ['score', 'name'],'person-score', middleware);

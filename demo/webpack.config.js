@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         main: path.resolve(__dirname, './index.js'),
+        angularApp: path.resolve(__dirname, './angular-app.js')
     },
     mode: "development",
     module: {
@@ -16,10 +17,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './dist',
-        historyApiFallback: {
-            index: 'index.html'
-        }
+        contentBase: path.resolve(__dirname),
     },
     output: {
         filename: '[name].bundle.js',

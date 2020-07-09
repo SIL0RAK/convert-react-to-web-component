@@ -1,14 +1,12 @@
 {
-  "name": "react-web-component",
+  "name": "react-use-web-component",
   "version": "0.1.0",
   "description": "Convert react component to WebComponent",
   "main": "create.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --open",
-    "start:demo": "webpack-dev-server --open --config demo/webpack.config.js",
     "build": "webpack",
-    "build:demo": "webpack --watch --config ./demo/webpack.config.js"
+    "start:demo": "webpack-dev-server --open --config demo/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +16,8 @@
     "react",
     "webcomponent",
     "legacy",
-    "convert"
+    "convert",
+    "microfrontend"
   ],
   "author": "Karolis Krušinskas",
   "license": "ISC",

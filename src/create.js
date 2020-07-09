@@ -8,17 +8,21 @@ import getAsSnakeCase from './getAsSnakeCase';
  * 
  * @param {React.Component} Component 
  * @param {string} name 
- * @param {function} propsModifier 
+ * @param {function} middleware 
  */
 const create = (
     Component,
     attributes,
     name,
-    propsModifier = (prop) => prop
+    middleware = (prop) => prop
 ) => {
-    const props = {};
-
     class WebComponent extends HTMLElement {
+        constructor () {
+            super();
+
+            this.props = {};
+        }
+
         static get observedAttributes() {
             return attributes;
         }
@@ -32,14 +36,14 @@ const create = (
         }
 
         attributeChangedCallback(name, oldValue, newValue) {
-            props[getAsPascalCase(name)] = propsModifier(newValue);
+            this.props[getAsPascalCase(name)] = middleware(newValue);
             this.render();
         }
 
         render() {
             if (this.isConnected) {
                 render(
-                    createElement(Component, {...props}, null),
+                    createElement(Component, {...this.props}, null),
                     this,
                 );
             }

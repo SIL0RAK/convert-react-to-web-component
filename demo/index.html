@@ -1,7 +1,6 @@
 <html>
     <body>
         <Section>
-           
             <header>
                 <h1>Demo App: Score counter</h1>
                 <h5>dom manipulation example</h5>
@@ -12,24 +11,39 @@
             </div>
             <person-score id="personScore" name="jonas" score=80></person-score>
         </Section>
+
+        <script>
+            var addButton = document.getElementById('add');
+            var removeButton = document.getElementById('remove');
+            var personScore =  document.getElementById('personScore');
+    
+            addButton.addEventListener('click', () => {
+                var score = personScore.getAttribute('score');
+                personScore.setAttribute('score', ++score);
+            })
+    
+            removeButton.addEventListener('click', () => {
+                var score = personScore.getAttribute('score');
+                personScore.setAttribute('score', --score);
+            })
+    
+        </script>
+        
+        <Section ng-app="multi-users-counter" ng-controller="controller">
+            <header>
+                <h1>Demo App: Score counter</h1>
+                <h5>Angularjs example</h5>
+            </header>
+            <ul>
+                <li ng-repeat="user in users">
+                    <button ng-click="addPoint(user.name)">Add point</button>
+                    <button ng-click="removePoint(user.name)">Remove point</button>
+                    <person-score name="{{user.name}}" score="{{user.score}}" ></person-score>
+                    <button ng-click="delete(user.name)">Delete</button>
+                </li>
+            </ul>
+        </Section>
     </body>
-
-    <script>
-        var addButton = document.getElementById('add');
-        var removeButton = document.getElementById('remove');
-        var personScore =  document.getElementById('personScore');
-
-        addButton.addEventListener('click', () => {
-            var score = personScore.getAttribute('score');
-            personScore.setAttribute('score', ++score);
-        })
-
-        removeButton.addEventListener('click', () => {
-            var score = personScore.getAttribute('score');
-            personScore.setAttribute('score', --score);
-        })
-
-    </script>
-
-    <script src='./dist/main.bundle.js' ></script>
 </html>
+
+<script src='main.bundle.js' ></script>

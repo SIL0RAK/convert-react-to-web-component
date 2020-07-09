@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const PersonScore = ({ name = 'petras', score = 10 }) => (
     <div>
@@ -7,4 +7,4 @@ const PersonScore = ({ name = 'petras', score = 10 }) => (
     </div>
 );
 
-export default PersonScore;
+export default memo(PersonScore);
