@@ -1,19 +1,19 @@
-# react-web-component
+# React to Web Component
 
   This lib is meant to make maintaining lagacy code less painfull.
 Micro frontend will reduce you legacy core enabling to integrate React (application/wigets) in it.
 
 # Install
 
-    npm install react-web-component
+    npm install rtwc
 or
 
-    yarn get react-web-component
+    yarn get rtwc
 
 # Usage
 
     import React from 'react';
-    import useAsWebComponent from 'react-web-component';
+    import useAsWebComponent from 'rtwc';
 
     const ReactApp = () => <div>Hello, world</div>;
     
@@ -26,7 +26,7 @@ this snipet will create `<react-app>` tag that can be used in plain html, angula
 To pass tag atributes to React component you have to specify them.
 
     import React from 'react';
-    import useAsWebComponent from 'react-web-component';
+    import useAsWebComponent from 'rtwc';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     
@@ -39,7 +39,7 @@ React component will rerender on attribute change.
 By default created tag name will be given React component name converted to `kebab-case`. You can change name of tab by specifying your desired name.
 
     import React from 'react';
-    import useAsWebComponent from 'react-web-component';
+    import useAsWebComponent from 'rtwc';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     
@@ -50,7 +50,7 @@ By default created tag name will be given React component name converted to `keb
 In some cases you may want to use use middleware to modify value before it is passed to React component. This can be usefull when implementing functionality in twig or angular apps.
 
     import React from 'react';
-    import useAsWebComponent from 'react-web-component';
+    import useAsWebComponent from 'rtwc';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     

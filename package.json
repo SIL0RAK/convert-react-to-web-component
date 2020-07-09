@@ -1,7 +1,7 @@
 {
-  "name": "react-use-web-component",
+  "name": "rtwc",
   "version": "0.1.0",
-  "description": "Convert react component to WebComponent",
+  "description": "Convert React to WebComponent",
   "main": "./dist/main.js",
   "module": "./src/create.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "convert",
     "microfrontend"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   },
