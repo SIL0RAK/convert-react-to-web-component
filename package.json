@@ -2,16 +2,23 @@
   "name": "react-use-web-component",
   "version": "0.1.0",
   "description": "Convert react component to WebComponent",
-  "main": "create.js",
+  "main": "./dist/main.js",
+  "module": "./src/create.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",
     "start:demo": "webpack-dev-server --open --config demo/webpack.config.js"
   },
+  "license": "ISC",
+  "author": "Karolis Krušinskas",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SIL0RAK/react-web-component.git"
   },
+  "bugs": {
+    "url": "https://github.com/SIL0RAK/react-web-component/issues"
+  },
+  "homepage": "https://github.com/SIL0RAK/react-web-component#readme",
   "keywords": [
     "react",
     "webcomponent",
@@ -19,12 +26,6 @@
     "convert",
     "microfrontend"
   ],
-  "author": "Karolis Krušinskas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SIL0RAK/react-web-component/issues"
-  },
-  "homepage": "https://github.com/SIL0RAK/react-web-component#readme",
   "dependencies": {
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
