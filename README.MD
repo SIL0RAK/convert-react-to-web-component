@@ -5,32 +5,32 @@ Micro frontend will reduce you legacy core enabling to integrate React (applicat
 
 # Install
 
-    npm install rtwc
+    npm install react-to-web-component
 or
 
-    yarn get rtwc
+    yarn get react-to-web-component
 
 # Usage
 
     import React from 'react';
-    import useAsWebComponent from 'rtwc';
+    import reactToWebComponent from 'react-to-web-component';
 
     const ReactApp = () => <div>Hello, world</div>;
     
-    useAsWebComponent(App);
+    reactToWebComponent(App);
 
-this snipet will create `<react-app>` tag that can be used in plain html, angular template or twig.
+this snippet will create `<react-app>` tag that can be used in plain html, angular template or twig.
 
 ## Attributes
 
-To pass tag atributes to React component you have to specify them.
+To pass tag attributes to React component you have to specify them.
 
     import React from 'react';
-    import useAsWebComponent from 'rtwc';
+    import reactToWebComponent from 'react-to-web-component';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     
-    useAsWebComponent(App, ['name'])
+    reactToWebComponent(App, ['name']);
 
 React component will rerender on attribute change.
 
@@ -39,18 +39,20 @@ React component will rerender on attribute change.
 By default created tag name will be given React component name converted to `kebab-case`. You can change name of tab by specifying your desired name.
 
     import React from 'react';
-    import useAsWebComponent from 'rtwc';
+    import reactToWebComponent from 'react-to-web-component';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     
-    useAsWebComponent(App, [name], 'app')
+    reactToWebComponent(App, ['name'], 'app');
+
+now you can call you component with `<app>` tag.
 
 ## Attribute modifier
 
-In some cases you may want to use use middleware to modify value before it is passed to React component. This can be usefull when implementing functionality in twig or angular apps.
+In some cases you may want to use use middleware to modify value before it is passed to React component. This can be useful when implementing functionality in twig or angular apps.
 
     import React from 'react';
-    import useAsWebComponent from 'rtwc';
+    import reactToWebComponent from 'react-to-web-component';
 
     const ReactApp = ({ name }) => <div>Hello, {name}</div>;
     
@@ -58,7 +60,7 @@ In some cases you may want to use use middleware to modify value before it is pa
         value.includes('{') ? undefined : value
     );
 
-    useAsWebComponent(App, [name], 'app', middleware);
+    reactToWebComponent(App, ['name'], 'app', middleware);
 
 # Additional stuff
 

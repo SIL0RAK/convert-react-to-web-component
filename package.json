@@ -1,5 +1,5 @@
 {
-  "name": "rtwc",
+  "name": "react-to-web-component",
   "version": "0.1.0",
   "description": "Convert React to WebComponent",
   "main": "./dist/main.js",
