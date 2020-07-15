@@ -1,6 +1,6 @@
 {
   "name": "react-to-web-component",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Convert React to WebComponent",
   "main": "./dist/main.js",
   "module": "./src/create.js",
@@ -11,6 +11,7 @@
   },
   "license": "ISC",
   "author": "Karolis Krušinskas",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SIL0RAK/react-web-component.git"
@@ -26,9 +27,9 @@
     "convert",
     "microfrontend"
   ],
-  "peerDependencies": {
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+  "dependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.0",
