@@ -20,3 +20,10 @@ body {
 #angular-section li {
     list-style: none;
 }
+
+.person-score {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

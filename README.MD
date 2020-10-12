@@ -4,16 +4,16 @@
 
 # Install
 
-    npm install react-to-web-component
+    npm install convert-react-to-web-component
 or
 
-    yarn get react-to-web-component
+    yarn add convert-react-to-web-component
 
 # Usage
 
 ```javascript
 import React from 'react';
-import reactToWebComponent from 'react-to-web-component';
+import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = () => <div>Hello, world</div>;
 
@@ -28,7 +28,7 @@ To pass tag attributes to React component you have to specify them.
 
 ```javascript
 import React from 'react';
-import reactToWebComponent from 'react-to-web-component';
+import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = ({ name }) => <div>Hello, {name}</div>;
 
@@ -43,7 +43,7 @@ By default created tag name will be given React component name converted to `keb
 
 ```javascript
 import React from 'react';
-import reactToWebComponent from 'react-to-web-component';
+import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = ({ name }) => <div>Hello, {name}</div>;
 
@@ -58,7 +58,7 @@ In some cases, you may want to use middleware to modify value before it is passe
 
 ```javascript
 import React from 'react';
-import reactToWebComponent from 'react-to-web-component';
+import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = ({ name }) => <div>Hello, {name}</div>;
 
