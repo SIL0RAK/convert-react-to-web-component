@@ -1,5 +1,5 @@
 {
-  "name": "react-to-web-component",
+  "name": "convert-react-to-web-component",
   "version": "1.0.0",
   "description": "Convert React to WebComponent",
   "main": "./dist/main.js",
@@ -12,7 +12,7 @@
   "license": "ISC",
   "author": "Karolis Krušinskas",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",

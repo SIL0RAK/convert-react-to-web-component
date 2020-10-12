@@ -1,6 +1,11 @@
 <html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
     <body>
-        <Section>
+        <Section id="jquery-section">
             <header>
                 <h1>Demo App: Score counter</h1>
                 <h5>dom manipulation example</h5>
@@ -29,17 +34,17 @@
     
         </script>
         
-        <Section ng-app="multi-users-counter" ng-controller="controller">
+        <Section ng-app="multi-users-counter" ng-controller="controller" id="angular-section">
             <header>
                 <h1>Demo App: Score counter</h1>
                 <h5>Angularjs example</h5>
             </header>
             <ul>
                 <li ng-repeat="user in users">
+                    <button ng-click="delete(user.name)">Delete</button>
                     <button ng-click="addPoint(user.name)">Add point</button>
                     <button ng-click="removePoint(user.name)">Remove point</button>
                     <person-score name="{{user.name}}" score="{{user.score}}" ></person-score>
-                    <button ng-click="delete(user.name)">Delete</button>
                 </li>
             </ul>
         </Section>

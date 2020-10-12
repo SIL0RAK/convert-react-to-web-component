@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jquery-section {
+    width: 50%;
+    margin-left: 20px;
+}
+
+#angular-section {
+    width: 50%;
+    margin-left: 20px;
+}
+
+#angular-section ul {
+   padding-left: 0;
+}
+
+#angular-section li {
+    list-style: none;
+}
