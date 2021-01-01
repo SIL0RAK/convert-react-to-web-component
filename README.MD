@@ -1,3 +1,8 @@
+![npm](https://img.shields.io/npm/v/convert-react-to-web-component)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/SIL0RAK/convert-react-to-web-component)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/SIL0RAK/convert-react-to-web-component/Node.js%20CI)
+
+
 # React to Web Component
 
   This library is meant to make maintaining legacy code less painful. Micro frontend will reduce your legacy core complexity enabling you to integrate React (application/widgets) in it.
