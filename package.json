@@ -1,6 +1,6 @@
 {
   "name": "convert-react-to-web-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert React to WebComponent",
   "main": "./dist/main.js",
   "module": "./src/create.js",
