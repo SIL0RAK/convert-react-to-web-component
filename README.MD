@@ -15,7 +15,7 @@
 
     yarn add convert-react-to-web-component
 
-and don't foreget to install peer dependencies:
+and don't forget to install peer dependencies:
     
    * react
    * react-dom
