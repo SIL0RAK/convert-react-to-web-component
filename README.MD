@@ -10,9 +10,15 @@
 # Install
 
     npm install convert-react-to-web-component
-or
+    
+ or
 
     yarn add convert-react-to-web-component
+
+and don't foreget to install peer dependencies:
+    
+   * react
+   * react-dom
 
 # Usage
 
