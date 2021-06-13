@@ -1,9 +1,5 @@
-/**
- * converts string to pascal case
- * @param {string} string 
- */
-const getAsPascalCase = (string) => (
-    string.split('-').map((str, index) => (
+const getAsPascalCase = (text: string) => (
+    text.split('-').map((str, index) => (
         (index !== 0)
             ? `${str.charAt(0).toUpperCase()}${str.substring(1)}`
             : str

@@ -1,3 +1,9 @@
 node_modules
 demo
-src/__tests__
+src
+.babelrc
+webpack.config.js
+.github
+tsconfig.json
+dist/getAsPascalCase.d.ts
+dist/getAsSnakeCase.d.ts

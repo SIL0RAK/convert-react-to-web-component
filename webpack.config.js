@@ -1,12 +1,23 @@
 module.exports = {
-    entry: './src/create.js',
+    entry: './src/create.ts',
     mode: 'production',
+    output: {
+        library: 'convert-react-to-web-component',
+        libraryTarget: 'umd',
+    },
+    externals: {
+        react: 'react',
+        "react-dom": 'react-dom'
+    },
+    resolve: {
+        extensions: ['.ts'],
+    },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(ts)$/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "ts-loader"
                 }
             }
         ]

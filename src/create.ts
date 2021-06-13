@@ -1,22 +1,18 @@
-import { createElement } from 'react';
+import React, { createElement } from 'react';
 import { unmountComponentAtNode, render } from 'react-dom';
 
-import getAsPascalCase from './getAsPascalCase.js';
+import getAsPascalCase from './getAsPascalCase';
 import getAsSnakeCase from './getAsSnakeCase';
 
-/**
- * 
- * @param {React.Component} Component 
- * @param {string} name 
- * @param {function} middleware 
- */
 const create = (
-    Component,
-    attributes,
-    name,
-    middleware = (prop) => prop
+    Component: React.FunctionComponent,
+    attributes: Array<string> = [],
+    name?: string,
+    middleware = (prop: string): string | unknown => prop
 ) => {
     class WebComponent extends HTMLElement {
+        private props: Record<string, unknown>;
+
         constructor () {
             super();
 
@@ -35,7 +31,7 @@ const create = (
             unmountComponentAtNode(this);
         }
 
-        attributeChangedCallback(name, oldValue, newValue) {
+        attributeChangedCallback(name, _oldValue, newValue) {
             this.props[getAsPascalCase(name)] = middleware(newValue);
             this.render();
         }
