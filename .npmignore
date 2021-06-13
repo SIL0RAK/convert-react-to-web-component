@@ -4,6 +4,7 @@ src
 .babelrc
 webpack.config.js
 .github
+jest.config.js
 tsconfig.json
 dist/getAsPascalCase.d.ts
 dist/getAsSnakeCase.d.ts
