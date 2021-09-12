@@ -17,7 +17,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: path.resolve(__dirname),
+        static: './demo',
     },
     output: {
         filename: '[name].bundle.js',
