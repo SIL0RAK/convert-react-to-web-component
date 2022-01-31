@@ -4,11 +4,15 @@ import { unmountComponentAtNode, render } from 'react-dom';
 import getAsPascalCase from './getAsPascalCase';
 import getAsSnakeCase from './getAsSnakeCase';
 
+interface IOptions {
+    attributes?: Array<string>;
+    name?: string;
+    middleware: (prop: string) => string | unknown;
+}
+
 const create = (
     Component: React.FunctionComponent,
-    attributes: Array<string> = [],
-    name?: string,
-    middleware = (prop: string): string | unknown => prop
+    options?: IOptions
 ) => {
     class WebComponent extends HTMLElement {
         private props: Record<string, unknown>;
@@ -20,7 +24,7 @@ const create = (
         }
 
         static get observedAttributes() {
-            return attributes;
+            return options?.attributes || [];
         }
 
         connectedCallback() {
@@ -32,7 +36,7 @@ const create = (
         }
 
         attributeChangedCallback(name, _oldValue, newValue) {
-            this.props[getAsPascalCase(name)] = middleware(newValue);
+            this.props[getAsPascalCase(name)] = options?.middleware(newValue) || newValue;
             this.render();
         }
 
@@ -46,7 +50,7 @@ const create = (
         }
     }
 
-    const webComponentName =  name || getAsSnakeCase(Component.name);
+    const webComponentName =  options?.name || getAsSnakeCase(Component.name);
 
     if (customElements.get(webComponentName) === undefined) {
         customElements.define(webComponentName, WebComponent);

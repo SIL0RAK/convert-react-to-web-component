@@ -28,7 +28,7 @@ import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = () => <div>Hello, world</div>;
 
-reactToWebComponent(App);
+reactToWebComponent(ReactApp);
 ```
 
 this snippet will create `<react-app>` tag that can be used in plain html, angular template or twig.
@@ -43,7 +43,7 @@ import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = ({ name }) => <div>Hello, {name}</div>;
 
-reactToWebComponent(App, ['name']);
+reactToWebComponent(ReactApp, { attributes: ['name'] });
 ```
 
 React component will rerender on attribute change.
@@ -58,7 +58,7 @@ import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = ({ name }) => <div>Hello, {name}</div>;
 
-reactToWebComponent(App, ['name'], 'app');
+reactToWebComponent(ReactApp, { attributes: ['name']; name: 'app' });
 ```
 
 now you can call you component with `<app>` tag.
@@ -77,7 +77,7 @@ const middleware = (value) => (
     value.includes('{') ? undefined : value
 );
 
-reactToWebComponent(App, ['name'], 'app', middleware);
+reactToWebComponent(ReactApp, { attributes: ['name'], middleware });
 ```
 # Additional stuff
 
