@@ -8,6 +8,7 @@ interface IOptions {
     attributes?: Array<string>;
     name?: string;
     middleware: (prop: string) => string | unknown;
+    useShadowDom: boolean;
 }
 
 const create = (
@@ -24,7 +25,7 @@ const create = (
         }
 
         static get observedAttributes() {
-            return options?.attributes || [];
+            return options?.attributes ? getAsSnakeCase(options?.attributes) : [];
         }
 
         connectedCallback() {
@@ -42,9 +43,14 @@ const create = (
 
         render() {
             if (this.isConnected) {
+                // if useShadowDom enabled create shadow root and use it as mountPoint for react app
+                let mountPoint = options.useShadowDom
+                    ? this.attachShadow({mode: 'open'})
+                    : this;
+                
                 render(
                     createElement(Component, {...this.props}, null),
-                    this,
+                    mountPoint,
                 );
             }
         }
