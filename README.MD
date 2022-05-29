@@ -95,7 +95,7 @@ reactToWebComponent(ReactApp, { attributes: ['name'], middleware });
 ## Shadow DOM
 
 
- To prevent style interference between parent application and your react app you can pass `useShadomDom` property which will create shadow root and mount react app to it.
+ To prevent style interference between parent application and your react app you can pass `shadowDom` property which will create shadow root and mount react app to it.
 
 ```javascript
 import React from 'react';
@@ -103,7 +103,7 @@ import reactToWebComponent from 'convert-react-to-web-component';
 
 const ReactApp = () => <div>Hello, World</div>;
 
-reactToWebComponent(ReactApp, { useShadowDom: true });
+reactToWebComponent(ReactApp, { shadowDom: "open" });
 ```
 
 # Additional stuff
