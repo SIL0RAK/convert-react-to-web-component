@@ -10,7 +10,7 @@ const PersonScore = ({ personName = 'petras', score = 10 }) => {
             <input
                 type="checkbox"
                 checked={checked}
-                onClick={() => setChecked(!checked)}
+                onChange={() => setChecked(!checked)}
             />
         </div>
     )
